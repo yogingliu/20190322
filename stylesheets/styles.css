@@ -203,6 +203,14 @@ a:hover {
   color: #000000;
 }
 
+@media screen and (max-width: 767px) {
+  .logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
 .top-icon {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
@@ -283,6 +291,16 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 350px) {
+  .index-image h2 {
+    font-size: 1.8em;
+    top: 12%;
+  }
+  .index-image span {
+    left: 1.5em;
+  }
+}
+
 .index-hot-product h3 {
   font-size: 30px;
 }
@@ -326,25 +344,45 @@ a:hover {
   background-color: gray;
   position: relative;
   height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .inspirational-quotes h3 {
   font-size: 30px;
-  margin: 0;
-  line-height: 90px;
+  margin: 0 0 30px 0;
 }
 
 .inspirational-quotes p {
   margin: 0;
 }
 
-.inspirational-quotes .quote-words {
-  margin: 20px 0;
+.quote-words {
+  margin: 0;
 }
 
 @media screen and (max-width: 767px) {
   .inspirational-quotes {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .inspirational-quotes h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .inspirational-quotes p {
+    display: inline;
+    font-size: 13.5px;
   }
 }
 
@@ -376,9 +414,31 @@ a:hover {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .book-newspaper .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .book-newspaper h3 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .book-newspaper h3 {
+    font-size: 22px;
+  }
+}
+
 .mail-block {
-  width: 500px;
+  width: 100%;
   position: relative;
+}
+
+.newspaper-mail {
+  width: 50%;
 }
 
 .newspaper-mail i {
@@ -387,8 +447,20 @@ a:hover {
   top: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .newspaper-mail {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .newspaper-mail {
+    width: 100%;
+  }
+}
+
 #mail-text {
-  width: 461px;
+  width: calc(100% - 39px);
   margin: 5px auto;
   padding-left: 35px;
   background-color: transparent;
@@ -401,7 +473,7 @@ a:hover {
 }
 
 #mail-button {
-  width: 500px;
+  width: 100%;
   height: 30px;
   margin: 8px auto;
   background-color: #000000;
@@ -411,6 +483,12 @@ a:hover {
 
 #mail-button:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  #mail-text {
+    width: calc(100% - 39px);
+  }
 }
 
 .footer-link {
@@ -440,11 +518,59 @@ a:hover {
   line-height: 32px;
 }
 
+@media screen and (max-width: 550px) {
+  .footer-link {
+    background-color: #3e3e3e;
+    height: auto;
+  }
+  .footer-link .container {
+    width: 100%;
+    margin: 0;
+  }
+  .footer-link ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-link li {
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .footer-link a {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .4s;
+            transition-duration: .4s;
+  }
+  .footer-link a:hover {
+    background-color: #5e5e5e;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer-link a {
+    font-size: 15px;
+  }
+}
+
 .copyright {
   height: 32px;
   background-color: #c0c0c0;
   font-size: 13px;
   line-height: 32px;
+}
+
+@media screen and (max-width: 350px) {
+  .copyright {
+    font-size: 12px;
+  }
 }
 
 .cell-phone-menu-footer {
